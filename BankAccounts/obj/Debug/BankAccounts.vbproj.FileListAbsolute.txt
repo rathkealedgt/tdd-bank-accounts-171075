@@ -1,0 +1,11 @@
+C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\bin\Debug\BankAccounts.exe.config
+C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\bin\Debug\BankAccounts.exe
+C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\bin\Debug\BankAccounts.pdb
+C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\bin\Debug\BankAccounts.xml
+C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\BankAccounts.vbprojAssemblyReference.cache
+C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\BankAccounts.Resources.resources
+C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\BankAccounts.vbproj.GenerateResource.cache
+C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\BankAccounts.vbproj.CoreCompileInputs.cache
+C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\BankAccounts.exe
+C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\BankAccounts.xml
+C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\BankAccounts.pdb
