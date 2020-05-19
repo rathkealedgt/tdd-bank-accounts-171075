@@ -186,6 +186,81 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
     End Sub
 
+    <TestMethod()> Public Sub DepositTest()
+
+        'arrange
+        Dim accountHolder As String = "Baguette"
+        Dim accountNumber As String = "GRFI 125155 12565342"
+        Dim interestRate As Double = 0.1
+        Dim balance As Double = 21412.53
+        Dim countryOfOrigin As String = "Nepal"
+
+        Dim accountOne As New BankAccount(accountHolder, accountNumber, balance, interestRate, countryOfOrigin)
+
+        Dim depositAmount As Double = 350.0
+        Dim expectedOutput As Double = balance + depositAmount
+
+        'act
+
+        accountOne.Deposit(depositAmount)
+
+        'assert
+
+        Assert.AreEqual(accountOne.GetBalance, expectedOutput)
+
+
+    End Sub
+
+    <TestMethod()> Public Sub WithdrawTest()
+
+        'arrange
+        Dim accountHolder As String = "Baguette"
+        Dim accountNumber As String = "GRFI 125155 12565342"
+        Dim interestRate As Double = 0.1
+        Dim balance As Double = 21412.53
+        Dim countryOfOrigin As String = "Nepal"
+
+        Dim accountOne As New BankAccount(accountHolder, accountNumber, balance, interestRate, countryOfOrigin)
+
+        Dim withdrawAmount As Double = 350.0
+        Dim expectedOutput As Double = balance - withdrawAmount
+
+        'act
+
+        accountOne.Withdraw(withdrawAmount)
+
+        'assert
+
+        Assert.AreEqual(accountOne.GetBalance, expectedOutput)
+
+
+    End Sub
+
+    <TestMethod()> Public Sub WithdrawOverdraftTest()
+
+        'arrange
+        Dim accountHolder As String = "Baguette"
+        Dim accountNumber As String = "GRFI 125155 12565342"
+        Dim interestRate As Double = 0.1
+        Dim balance As Double = 21412.53
+        Dim countryOfOrigin As String = "Nepal"
+
+        Dim accountOne As New BankAccount(accountHolder, accountNumber, balance, interestRate, countryOfOrigin)
+
+        Dim withdrawAmount As Double = 25000
+
+        'act
+
+        accountOne.Withdraw(withdrawAmount)
+
+        'assert
+
+        Assert.AreEqual(accountOne.GetBalance, balance)
+
+
+    End Sub
+
 End Class
+
 
 

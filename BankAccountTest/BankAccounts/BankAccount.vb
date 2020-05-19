@@ -80,9 +80,22 @@
 
     Function Withdraw(withdrawInput As Double)
 
-        Me.balance = Me.balance - withdrawInput
+        Dim newBalance As Double
 
-        Return Me.balance
+        newBalance = Me.balance - withdrawInput
+
+        If newBalance <= 0 Then
+
+            Return Me.balance
+
+        Else
+
+            Me.balance = newBalance
+
+            Return Me.balance
+
+
+        End If
 
     End Function
 
@@ -98,7 +111,7 @@
         Return ("Account Holder: " & Me.accountHolder & vbNewLine &
                 "Account Number: " & Me.accountNumber & vbNewLine &
                 "Country of Origin: " & Me.countryOfOrigin & vbNewLine &
-                "Balance: " & Me.balance & vbNewLine &
+                "Balance: " & "$" & Me.balance & vbNewLine &
                 "Interest Rate: " & Me.interestRate * 100 & "%")
     End Function
 End Class
