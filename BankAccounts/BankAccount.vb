@@ -108,10 +108,10 @@
     End Function
 
     Public Overrides Function ToString() As String
-        Return ("Account Holder: " & Me.accountHolder & vbNewLine &
-                "Account Number: " & Me.accountNumber & vbNewLine &
-                "Country of Origin: " & Me.countryOfOrigin & vbNewLine &
-                "Balance: " & "$" & Me.balance & vbNewLine &
-                "Interest Rate: " & Me.interestRate * 100 & "%")
+        Return (Me.accountHolder & vbCrLf &
+                 Me.accountNumber & vbCrLf &
+                 Me.countryOfOrigin & vbCrLf &
+                 Me.balance & vbCrLf &
+                 Me.interestRate * 100 & "%")
     End Function
 End Class

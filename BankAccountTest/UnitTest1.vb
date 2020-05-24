@@ -260,6 +260,37 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
     End Sub
 
+    <TestMethod()> Public Sub ToStingTest()
+
+        'arrange
+        Dim accountHolder As String = "Baguette"
+        Dim accountNumber As String = "GRFI 125155 12565342"
+        Dim interestRate As Double = 0.01
+        Dim balance As Double = 21412.53
+        Dim countryOfOrigin As String = "Nepal"
+
+        Dim accountOne As New BankAccount(accountHolder, accountNumber, balance, interestRate, countryOfOrigin)
+
+        Dim expectedStringOutput As New StringBuilder()
+
+        expectedStringOutput.Append("Baguette" & vbCrLf)
+        expectedStringOutput.Append("GRFI 125155 12565342" & vbCrLf)
+        expectedStringOutput.Append("Nepal" & vbCrLf)
+        expectedStringOutput.Append("21412.53" & vbCrLf)
+        expectedStringOutput.Append("1%")
+
+
+        'act
+
+        Dim actualString = accountOne.ToString()
+
+        'assert
+
+        Assert.AreEqual(actualString, expectedStringOutput.ToString())
+
+
+    End Sub
+
 End Class
 
 
