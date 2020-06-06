@@ -9,4 +9,3 @@ C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\
 C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\BankAccounts.exe
 C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\BankAccounts.xml
 C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\BankAccounts.pdb
-C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccounts\obj\Debug\BankAccounts.MainInterface.resources

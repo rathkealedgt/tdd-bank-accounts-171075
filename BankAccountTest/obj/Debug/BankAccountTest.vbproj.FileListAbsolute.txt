@@ -16,7 +16,3 @@ C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccountTest\obj\Deb
 C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccountTest\obj\Debug\BankAccountTest.dll
 C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccountTest\obj\Debug\BankAccountTest.xml
 C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccountTest\obj\Debug\BankAccountTest.pdb
-C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccountTest\bin\Debug\BankAccounts.exe
-C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccountTest\bin\Debug\BankAccounts.pdb
-C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccountTest\bin\Debug\BankAccounts.xml
-C:\Users\benan\Documents\GitHub\tdd-bank-accounts-171075\BankAccountTest\bin\Debug\BankAccounts.exe.config
