@@ -260,7 +260,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
     End Sub
 
-    <TestMethod()> Public Sub ToStingTest()
+    <TestMethod()> Public Sub ToStringTest()
 
         'arrange
         Dim accountHolder As String = "Baguette"
@@ -277,7 +277,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         expectedStringOutput.Append("GRFI 125155 12565342" & vbCrLf)
         expectedStringOutput.Append("Nepal" & vbCrLf)
         expectedStringOutput.Append("21412.53" & vbCrLf)
-        expectedStringOutput.Append("1%")
+        expectedStringOutput.Append("1%" & vbCrLf)
 
 
         'act
@@ -290,8 +290,6 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
 
     End Sub
-
-
 
 End Class
 

@@ -14,7 +14,7 @@ Public Class MainInterface
 
     End Sub
 
-    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
 
         End
 
@@ -79,10 +79,22 @@ Public Class MainInterface
                 CountryOfOriginInput.Focus()
 
 
-
             ElseIf ex.Message = "MaximumNumAccountsReached" Then
 
                 Feedback = "You have reached the maximum number of accounts"
+
+
+            ElseIf ex.Message = "InvalidInterestRateDataTypeException" Then
+
+                Feedback = "Please enter a number for the interest rate"
+                InterestRateInput.Focus()
+
+
+            ElseIf ex.Message = "InvalidBalanceDataTypeException" Then
+
+                Feedback = "Please enter a number for the balance"
+                BalanceInput.Focus()
+
 
             Else
                 Title = "An Error Has Occourred"
@@ -104,7 +116,8 @@ Public Class MainInterface
         If BalanceInput.Text = "" Then Throw New Exception("BalanceRequiredException")
         If CountryOfOriginInput.Text = "" Then Throw New Exception("CountryOfOriginRequiredException")
         If Me.AccountInt >= 5 Then Throw New Exception("MaximumNumAccountsReached")
-        If InterestRateInput.Text Is String Then Throw New Exception("InvalidDataTypeException")
+        If IsNumeric(InterestRateInput.Text) = False Then Throw New Exception("InvalidInterestRateDataTypeException")
+        If IsNumeric(BalanceInput.Text) = False Then Throw New Exception("InvalidBalanceDataTypeException")
 
         Dim accountHolder As String = AccountNameInput.Text
         Dim accountNumber As String = AccountNumberInput.Text
@@ -140,4 +153,64 @@ Public Class MainInterface
 
 
     End Sub
+
+    Private Sub btnDeposit_Click(sender As Object, e As EventArgs) Handles btnDeposit.Click
+
+        Dim depositInput As String
+        Dim Message As String = "Please enter how much you want to Deposit"
+        Dim Title As String = "Deposit"
+
+        Dim Feedback As String = "You have deposited $" & depositInput
+        Dim TitleFeedback As String = "Deposit"
+        Dim isError As Boolean = True
+
+        While isError = True
+
+            Try
+
+                depositInput = InputBox(Message, Title)
+
+                Me.DepositCheck(depositInput)
+
+            Catch Ex As Exception
+
+                TitleFeedback = Ex.Message
+
+                If Ex.Message = "InvalidDepositDataTypeException" Then
+
+                    Feedback = "Please enter a number to withdraw funds"
+                    MsgBox(Feedback, vbOKOnly, TitleFeedback)
+
+                ElseIf Ex.Message = "DepositInputRequiredException" Then
+
+                    Feedback = "Please enter a deposit amount"
+                    MsgBox(Feedback, vbOKOnly, TitleFeedback)
+
+                Else
+
+                    Feedback = "An error has occoured"
+                    MsgBox(Feedback, vbOKOnly, TitleFeedback)
+
+                End If
+
+            End Try
+
+        End While
+
+        MsgBox(Feedback, vbOKOnly, TitleFeedback)
+
+
+
+
+
+    End Sub
+
+    Public Function DepositCheck(DepositInput As String)
+
+        If DepositInput = "" Then Throw New Exception("DepositInputRequiredException")
+        If IsNumeric(DepositInput) = False Then Throw New Exception("InvalidDepositDataTypeException")
+
+        Return Nothing
+
+    End Function
 End Class

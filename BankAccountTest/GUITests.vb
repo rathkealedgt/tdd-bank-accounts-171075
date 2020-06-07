@@ -177,6 +177,64 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
     End Sub
 
+    <TestMethod()> Public Sub TestInvalidBalanceDataType()
+
+        'arrange
+        Dim accountHolder As String = "Baguette"
+        Dim accountNumber As String = "GRFI 125155 12565342"
+        Dim interestRate As String = "10"
+        Dim balance As String = "Test"
+        Dim countryOfOrigin As String = "Nepal"
+        Dim BF As New BankAccounts.MainInterface()
+
+        BF.SetTextForTesting(accountHolder, accountNumber, balance, interestRate, countryOfOrigin)
+
+        'act
+
+        Try
+
+            BF.CreateAccount()
+            Assert.Fail()
+
+        Catch Ex As Exception
+
+            'assert
+
+            Assert.AreEqual("InvalidBalanceDataTypeException", Ex.Message)
+
+        End Try
+
+    End Sub
+
+    <TestMethod()> Public Sub TestInvalidInterestRateDataType()
+
+        'arrange
+        Dim accountHolder As String = "Baguette"
+        Dim accountNumber As String = "GRFI 125155 12565342"
+        Dim interestRate As String = "Test"
+        Dim balance As String = "10000.00"
+        Dim countryOfOrigin As String = "Nepal"
+        Dim BF As New BankAccounts.MainInterface()
+
+        BF.SetTextForTesting(accountHolder, accountNumber, balance, interestRate, countryOfOrigin)
+
+        'act
+
+        Try
+
+            BF.CreateAccount()
+            Assert.Fail()
+
+        Catch Ex As Exception
+
+            'assert
+
+            Assert.AreEqual("InvalidInterestRateDataTypeException", Ex.Message)
+
+        End Try
+
+    End Sub
+
     <TestMethod()> Public Sub TestAddFiveAccounts()
 
         'arrange
@@ -250,6 +308,54 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Catch Ex As Exception
 
             Assert.AreEqual("MaximumNumAccountsReached", Ex.Message)
+
+
+        End Try
+
+    End Sub
+
+    <TestMethod()> Public Sub TestDepositInputRequiredException()
+
+        'arrange
+
+        Dim BF As New BankAccounts.MainInterface()
+        'act
+
+        Try
+            BF.DepositCheck("")
+
+            'assert
+
+            Assert.Fail()
+
+
+        Catch Ex As Exception
+
+            Assert.AreEqual("DepositInputRequiredException", Ex.Message)
+
+
+        End Try
+
+    End Sub
+
+    <TestMethod()> Public Sub TestInvalidDepositDataTypeException()
+
+        'arrange
+
+        Dim BF As New BankAccounts.MainInterface()
+        'act
+
+        Try
+            BF.DepositCheck("Test")
+
+            'assert
+
+            Assert.Fail()
+
+
+        Catch Ex As Exception
+
+            Assert.AreEqual("InvalidDepositDataTypeException", Ex.Message)
 
 
         End Try

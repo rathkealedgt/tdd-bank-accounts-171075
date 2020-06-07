@@ -22,9 +22,9 @@ Partial Class MainInterface
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.btnDeposit = New System.Windows.Forms.Button()
+        Me.btnWithdraw = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.AccountNameInput = New System.Windows.Forms.TextBox()
         Me.AccountNumberInput = New System.Windows.Forms.TextBox()
         Me.BalanceInput = New System.Windows.Forms.TextBox()
@@ -43,35 +43,35 @@ Partial Class MainInterface
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'btnDeposit
+        '
+        Me.btnDeposit.Location = New System.Drawing.Point(355, 271)
+        Me.btnDeposit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnDeposit.Name = "btnDeposit"
+        Me.btnDeposit.Size = New System.Drawing.Size(75, 61)
+        Me.btnDeposit.TabIndex = 0
+        Me.btnDeposit.Text = "Deposit Funds"
+        Me.btnDeposit.UseVisualStyleBackColor = True
+        '
+        'btnWithdraw
+        '
+        Me.btnWithdraw.Location = New System.Drawing.Point(464, 271)
+        Me.btnWithdraw.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnWithdraw.Name = "btnWithdraw"
+        Me.btnWithdraw.Size = New System.Drawing.Size(75, 61)
+        Me.btnWithdraw.TabIndex = 1
+        Me.btnWithdraw.Text = "Withdraw Funds"
+        Me.btnWithdraw.UseVisualStyleBackColor = True
+        '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(355, 271)
+        Me.btnExit.Location = New System.Drawing.Point(516, 10)
         Me.btnExit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 61)
-        Me.btnExit.TabIndex = 0
-        Me.btnExit.Text = "Deposit Funds"
+        Me.btnExit.TabIndex = 2
+        Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(464, 271)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 61)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Withdraw Funds"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(516, 10)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 61)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Exit"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'AccountNameInput
         '
@@ -225,9 +225,9 @@ Partial Class MainInterface
         Me.Controls.Add(Me.BalanceInput)
         Me.Controls.Add(Me.AccountNumberInput)
         Me.Controls.Add(Me.AccountNameInput)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnWithdraw)
+        Me.Controls.Add(Me.btnDeposit)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "MainInterface"
         Me.Text = "MainInterface"
@@ -237,9 +237,9 @@ Partial Class MainInterface
 
     End Sub
 
+    Friend WithEvents btnDeposit As Windows.Forms.Button
+    Friend WithEvents btnWithdraw As Windows.Forms.Button
     Friend WithEvents btnExit As Windows.Forms.Button
-    Friend WithEvents Button2 As Windows.Forms.Button
-    Friend WithEvents Button3 As Windows.Forms.Button
     Friend WithEvents AccountNameInput As Windows.Forms.TextBox
     Friend WithEvents AccountNumberInput As Windows.Forms.TextBox
     Friend WithEvents BalanceInput As Windows.Forms.TextBox
