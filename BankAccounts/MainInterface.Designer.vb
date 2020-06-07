@@ -22,211 +22,237 @@ Partial Class MainInterface
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.AccountNameInput = New System.Windows.Forms.TextBox()
         Me.AccountNumberInput = New System.Windows.Forms.TextBox()
         Me.BalanceInput = New System.Windows.Forms.TextBox()
-        Me.CountryOfOriginINput = New System.Windows.Forms.TextBox()
+        Me.CountryOfOriginInput = New System.Windows.Forms.TextBox()
         Me.InterestRateInput = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.btnPrintAllAccounts = New System.Windows.Forms.Button()
+        Me.BtnAddAccount = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.EventLog1 = New System.Diagnostics.EventLog()
+        Me.TxtAccountList = New System.Windows.Forms.TextBox()
+        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnExit
         '
-        Me.Button1.Location = New System.Drawing.Point(506, 334)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 75)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Deposit Funds"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnExit.Location = New System.Drawing.Point(355, 271)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 61)
+        Me.btnExit.TabIndex = 0
+        Me.btnExit.Text = "Deposit Funds"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(667, 334)
+        Me.Button2.Location = New System.Drawing.Point(464, 271)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 75)
+        Me.Button2.Size = New System.Drawing.Size(75, 61)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Withdraw Funds"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(688, 12)
+        Me.Button3.Location = New System.Drawing.Point(516, 10)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(100, 75)
+        Me.Button3.Size = New System.Drawing.Size(75, 61)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Exit"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'AccountNameInput
         '
-        Me.AccountNameInput.Location = New System.Drawing.Point(24, 82)
+        Me.AccountNameInput.Location = New System.Drawing.Point(18, 67)
+        Me.AccountNameInput.Margin = New System.Windows.Forms.Padding(2)
         Me.AccountNameInput.Name = "AccountNameInput"
-        Me.AccountNameInput.Size = New System.Drawing.Size(269, 22)
+        Me.AccountNameInput.Size = New System.Drawing.Size(203, 20)
         Me.AccountNameInput.TabIndex = 3
         '
         'AccountNumberInput
         '
-        Me.AccountNumberInput.Location = New System.Drawing.Point(24, 135)
+        Me.AccountNumberInput.Location = New System.Drawing.Point(18, 110)
+        Me.AccountNumberInput.Margin = New System.Windows.Forms.Padding(2)
         Me.AccountNumberInput.Name = "AccountNumberInput"
-        Me.AccountNumberInput.Size = New System.Drawing.Size(269, 22)
+        Me.AccountNumberInput.Size = New System.Drawing.Size(203, 20)
         Me.AccountNumberInput.TabIndex = 4
         '
         'BalanceInput
         '
-        Me.BalanceInput.Location = New System.Drawing.Point(24, 187)
+        Me.BalanceInput.Location = New System.Drawing.Point(18, 152)
+        Me.BalanceInput.Margin = New System.Windows.Forms.Padding(2)
         Me.BalanceInput.Name = "BalanceInput"
-        Me.BalanceInput.Size = New System.Drawing.Size(269, 22)
+        Me.BalanceInput.Size = New System.Drawing.Size(203, 20)
         Me.BalanceInput.TabIndex = 6
         '
-        'CountryOfOriginINput
+        'CountryOfOriginInput
         '
-        Me.CountryOfOriginINput.Location = New System.Drawing.Point(24, 305)
-        Me.CountryOfOriginINput.Name = "CountryOfOriginINput"
-        Me.CountryOfOriginINput.Size = New System.Drawing.Size(269, 22)
-        Me.CountryOfOriginINput.TabIndex = 8
+        Me.CountryOfOriginInput.Location = New System.Drawing.Point(18, 248)
+        Me.CountryOfOriginInput.Margin = New System.Windows.Forms.Padding(2)
+        Me.CountryOfOriginInput.Name = "CountryOfOriginInput"
+        Me.CountryOfOriginInput.Size = New System.Drawing.Size(203, 20)
+        Me.CountryOfOriginInput.TabIndex = 8
         '
         'InterestRateInput
         '
-        Me.InterestRateInput.Location = New System.Drawing.Point(24, 244)
+        Me.InterestRateInput.Location = New System.Drawing.Point(18, 198)
+        Me.InterestRateInput.Margin = New System.Windows.Forms.Padding(2)
         Me.InterestRateInput.Name = "InterestRateInput"
-        Me.InterestRateInput.Size = New System.Drawing.Size(269, 22)
+        Me.InterestRateInput.Size = New System.Drawing.Size(203, 20)
         Me.InterestRateInput.TabIndex = 7
         '
-        'Button4
+        'btnPrintAllAccounts
         '
-        Me.Button4.Location = New System.Drawing.Point(330, 334)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(100, 75)
-        Me.Button4.TabIndex = 9
-        Me.Button4.Text = "Print Bank Accounts"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnPrintAllAccounts.Location = New System.Drawing.Point(251, 271)
+        Me.btnPrintAllAccounts.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnPrintAllAccounts.Name = "btnPrintAllAccounts"
+        Me.btnPrintAllAccounts.Size = New System.Drawing.Size(75, 61)
+        Me.btnPrintAllAccounts.TabIndex = 9
+        Me.btnPrintAllAccounts.Text = "Print Bank Accounts"
+        Me.btnPrintAllAccounts.UseVisualStyleBackColor = True
         '
-        'Button5
+        'BtnAddAccount
         '
-        Me.Button5.Location = New System.Drawing.Point(24, 356)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(100, 31)
-        Me.Button5.TabIndex = 10
-        Me.Button5.Text = "Enter"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(330, 12)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(352, 289)
-        Me.RichTextBox1.TabIndex = 11
-        Me.RichTextBox1.Text = ""
+        Me.BtnAddAccount.Location = New System.Drawing.Point(18, 289)
+        Me.BtnAddAccount.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnAddAccount.Name = "BtnAddAccount"
+        Me.BtnAddAccount.Size = New System.Drawing.Size(85, 25)
+        Me.BtnAddAccount.TabIndex = 10
+        Me.BtnAddAccount.Text = "Add Account"
+        Me.BtnAddAccount.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(55, 30)
+        Me.Label1.Location = New System.Drawing.Point(41, 24)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(196, 17)
+        Me.Label1.Size = New System.Drawing.Size(151, 13)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Bank Accont Information Input"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(21, 62)
+        Me.Label2.Location = New System.Drawing.Point(16, 50)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 17)
+        Me.Label2.Size = New System.Drawing.Size(78, 13)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Account Name"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(21, 115)
+        Me.Label3.Location = New System.Drawing.Point(16, 93)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(113, 17)
+        Me.Label3.Size = New System.Drawing.Size(87, 13)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Account Number"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(21, 167)
+        Me.Label4.Location = New System.Drawing.Point(16, 136)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(59, 17)
+        Me.Label4.Size = New System.Drawing.Size(46, 13)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Balance"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(21, 224)
+        Me.Label5.Location = New System.Drawing.Point(16, 182)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(89, 17)
+        Me.Label5.Size = New System.Drawing.Size(68, 13)
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "Interest Rate"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(21, 284)
+        Me.Label6.Location = New System.Drawing.Point(16, 231)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(118, 17)
+        Me.Label6.Size = New System.Drawing.Size(87, 13)
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Country Of Origin"
         '
+        'EventLog1
+        '
+        Me.EventLog1.SynchronizingObject = Me
+        '
+        'TxtAccountList
+        '
+        Me.TxtAccountList.Location = New System.Drawing.Point(271, 12)
+        Me.TxtAccountList.Multiline = True
+        Me.TxtAccountList.Name = "TxtAccountList"
+        Me.TxtAccountList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TxtAccountList.Size = New System.Drawing.Size(228, 234)
+        Me.TxtAccountList.TabIndex = 18
+        '
         'MainInterface
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.Controls.Add(Me.TxtAccountList)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.CountryOfOriginINput)
+        Me.Controls.Add(Me.BtnAddAccount)
+        Me.Controls.Add(Me.btnPrintAllAccounts)
+        Me.Controls.Add(Me.CountryOfOriginInput)
         Me.Controls.Add(Me.InterestRateInput)
         Me.Controls.Add(Me.BalanceInput)
         Me.Controls.Add(Me.AccountNumberInput)
         Me.Controls.Add(Me.AccountNameInput)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnExit)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "MainInterface"
         Me.Text = "MainInterface"
+        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button1 As Windows.Forms.Button
+    Friend WithEvents btnExit As Windows.Forms.Button
     Friend WithEvents Button2 As Windows.Forms.Button
     Friend WithEvents Button3 As Windows.Forms.Button
     Friend WithEvents AccountNameInput As Windows.Forms.TextBox
     Friend WithEvents AccountNumberInput As Windows.Forms.TextBox
     Friend WithEvents BalanceInput As Windows.Forms.TextBox
-    Friend WithEvents CountryOfOriginINput As Windows.Forms.TextBox
+    Friend WithEvents CountryOfOriginInput As Windows.Forms.TextBox
     Friend WithEvents InterestRateInput As Windows.Forms.TextBox
-    Friend WithEvents Button4 As Windows.Forms.Button
-    Friend WithEvents Button5 As Windows.Forms.Button
-    Friend WithEvents RichTextBox1 As Windows.Forms.RichTextBox
+    Friend WithEvents btnPrintAllAccounts As Windows.Forms.Button
+    Friend WithEvents BtnAddAccount As Windows.Forms.Button
     Friend WithEvents Label1 As Windows.Forms.Label
     Friend WithEvents Label2 As Windows.Forms.Label
     Friend WithEvents Label3 As Windows.Forms.Label
     Friend WithEvents Label4 As Windows.Forms.Label
     Friend WithEvents Label5 As Windows.Forms.Label
     Friend WithEvents Label6 As Windows.Forms.Label
+    Friend WithEvents EventLog1 As EventLog
+    Friend WithEvents TxtAccountList As Windows.Forms.TextBox
 End Class

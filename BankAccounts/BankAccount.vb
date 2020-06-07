@@ -112,6 +112,6 @@
                  Me.accountNumber & vbCrLf &
                  Me.countryOfOrigin & vbCrLf &
                  Me.balance & vbCrLf &
-                 Me.interestRate * 100 & "%")
+                 Me.interestRate * 100 & "%" & vbCrLf)
     End Function
 End Class
